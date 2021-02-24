@@ -1,0 +1,62 @@
+* {
+    /* border: 1px dotted red; */
+}
+
+.init {
+    background-color: #1B0D26;
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.top-nav {
+    display: flex;
+    margin: 0;
+    padding: 1vh 5vw;
+    color: #4B983E;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 7vw;
+    border-bottom: 2px solid yellowgreen;
+}
+
+.top-nav a {
+    color: #4B983E;
+}
+
+.menu {
+    display: none;
+}
+
+#appName {
+    color: yellow;
+    text-shadow: 3px 1px 4px rgb(187, 190, 20, 50%);
+    -webkit-text-stroke: 0.05vw yellow;
+    -webkit-text-fill-color: rgb(187, 190, 20, 40%);
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.step-tracker {
+    color: #bce4bc;
+    text-align: center;
+}
+
+#step {
+    font-size: 5vw;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#dash {
+    width: 2vw;
+    height: 1vh;
+    color: #bce4bc;
+}
+

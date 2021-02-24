@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Relocation Calculator</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <script src="https://kit.fontawesome.com/dad72cd715.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="init">
+    <main>
+        <!-- Top Nav Menu -->
+        <div class="top-nav">
+
+            <div class="dropdown">
+                
+                <div>
+                    <a href="javascript:void(0);" class="hamburger" onclick="dropMenu()">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                
+                <div class="menu">
+                    <a href="#home">Repo</a>
+                    <a href="#about">About</a>
+                </div>
+            
+            </div>
+
+            <div>
+                <span id="appName">
+                    Utility Mover
+                </span>
+            </div>
+
+            <div>
+                <a href="#" id="logo"><i class="fas fa-bolt"></i></a>
+            </div>
+            
+        </div>
+
+            <!-- <div>
+                <ul class="nav list">
+                    <li class="home left"><a href="#">Home</a></li>
+                    <li class="item1"><a href="#">Repository</a></li>
+                    <li class="item2"><a href="#">Utility Mover</a></li>
+                </ul>
+            </div> -->
+    <div class="step-tracker">
+
+        <h2 id="step">Step 1: Origin Details</h2>
+
+        <div class="circles">
+
+            <i id="circle1" class="fas fa-circle"></i>
+            
+            <span id="dash"><hr></span>
+            
+            <i id="circle2" class="far fa-circle"></i>
+            
+            <span id="dash"><hr></span>
+            
+            <i id="circle3" class="far fa-circle"></i>
+
+        </div>
+
+        <!-- Completed step: <i class="fas fa-check-circle"></i> -->
+
+    </div>
+    <div class="form">
+        <form>
+
+            <label for="origin_state">Current State or Zip:</label><br>
+            <input type="text" id="origin_state" name="origin_state" placeholder="CA"><br>
+
+            <label for="origin_bill">Total Utilities:</label><br>
+            <input type="text" id="origin_bill" name="origin_bill" placeholder="123.45"><br>
+
+        </form>
+
+    </div>
+
+    <!-- <div class="utility-mover">
+        <div class="step">
+            <h2 class="utility-progress">Step 1: Enter origin.</h2>
+        </div>
+        <div class="tracker">
+            <img src="" class="progress-tracker">
+        </div>
+    </div> -->
+
+    </main>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+    <script src="js/utility.js"></script>
+</body>
+</html>
