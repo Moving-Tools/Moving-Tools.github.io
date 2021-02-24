@@ -1,28 +1,30 @@
-* {
-    /* border: 1px dotted red; */
-}
+/* * {
+    border: 1px dotted red;
+} */
 
 .init {
+    box-sizing: border-box;
     background-color: #1B0D26;
     padding: 0;
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    color: #84d876;
+    font-size: 4vw;
 }
 
 .top-nav {
     display: flex;
     margin: 0;
-    padding: 1vh 5vw;
+    padding: 2vh 5vw;
     color: #4B983E;
     justify-content: space-between;
     flex-direction: row;
     font-size: 7vw;
-    border-bottom: 2px solid yellowgreen;
+    border-bottom: 0.3vh solid #84d876;
 }
 
 .top-nav a {
-    color: #4B983E;
+    color: #bce4bc;
 }
 
 .menu {
@@ -31,9 +33,9 @@
 
 #appName {
     color: yellow;
-    text-shadow: 3px 1px 4px rgb(187, 190, 20, 50%);
+    text-shadow: 3px 1px 4px rgb(187, 190, 20, 0.6);
     -webkit-text-stroke: 0.05vw yellow;
-    -webkit-text-fill-color: rgb(187, 190, 20, 40%);
+    -webkit-text-fill-color: rgba(179, 190, 20, 0.4);
     font-family: 'Oleo Script Swash Caps', cursive;
 }
 
@@ -44,19 +46,44 @@
 
 #step {
     font-size: 5vw;
+    padding: 0;
+    margin: 3vh 0 1vh;
 }
 
 .circles {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    font-size: 8vw;
     padding: 0;
-    margin: 0;
+    margin: 1vh 0 3vh;
 }
 
 #dash {
-    width: 2vw;
-    height: 1vh;
-    color: #bce4bc;
+    transform: translateY(-0.1vh);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    margin: 0 20%;
+    border: 2px solid rgba(188, 228, 188, 80%);
+    border-radius: 1vh 1vw;
+}
+
+input {
+    width: 40%;
+    height: 10%;
+    font-weight: 600;
+    font-size: calc(10px + 0.5vh + 0.5vw);
+    margin: 2% 0 5% 0;
+}
+
+button {
+    width: calc(7vh + 7vw);
+    height: calc(2.5vh + 2.5vw);
+    align-self: center;
+    margin-top: 1vh;
+    font-size: calc(1vw + 1vh);
+}
