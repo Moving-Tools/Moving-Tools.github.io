@@ -54,7 +54,7 @@
 
         <h2 id="step">Step 1: Origin Details</h2>
 
-        <div class="circles">
+        <div id="circles">
 
             <i id="circle1" class="fas fa-circle"></i>
             
@@ -72,7 +72,8 @@
 
     </div>
     <div class="form">
-        <form>
+
+        <form id="formText">
 
             <label for="origin_state">Current State or Zip:</label>
             <input type="text" id="origin_state" name="origin_state" placeholder="CA">
@@ -81,7 +82,7 @@
             <input type="text" id="origin_bill" name="origin_bill" placeholder="123.45">
 
             <br>
-            <button type="button">Next</button>
+            <button onclick="nextStep()" type="button" id="next">Next</button>
 
         </form>
 
