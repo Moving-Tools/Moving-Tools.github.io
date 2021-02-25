@@ -1,5 +1,3 @@
-window.onload = function() {
-
 var button = document.getElementById("next");
 var formText = document.getElementById("formText");
 
@@ -49,8 +47,6 @@ var step3 = `<p>Your estimated utility bill is 222.22<br>
 This may or may not be accurate!</p>
 <br>
 <button onclick="nextStep()" type="button" id="next">Restart</button>`;
-
-}
 
 function nextStep() {
     if(step == 1){
