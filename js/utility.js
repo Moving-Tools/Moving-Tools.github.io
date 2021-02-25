@@ -57,6 +57,7 @@ function nextStep() {
         step = 2;
         formText.innerHTML = step2;
         formText = document.getElementById("formText");
+        console.log(circle1);
         circle1.classList.remove(uncheckedCircle);
         circle1.classList.add(checkedCircle);
         circle2.classList.remove(incompleteStepCircle);
