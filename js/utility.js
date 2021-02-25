@@ -1,3 +1,5 @@
+window.onload = function() {
+
 var button = document.getElementById("next");
 var formText = document.getElementById("formText");
 
@@ -48,6 +50,8 @@ This may or may not be accurate!</p>
 <br>
 <button onclick="nextStep()" type="button" id="next">Restart</button>`;
 
+}
+
 function nextStep() {
     if(step == 1){
         step = 2;
@@ -74,9 +78,9 @@ function nextStep() {
         formText.innerHTML = step1;
         formText = document.getElementById("formText");
         circleHTML.innerHTML = circlesDefault;
-        var circle1 = document.getElementById("circle1");
-        var circle2 = document.getElementById("circle2");
-        var circle3 = document.getElementById("circle3");
+        circle1 = document.getElementById("circle1");
+        circle2 = document.getElementById("circle2");
+        circle3 = document.getElementById("circle3");
         return;
     }
 };
