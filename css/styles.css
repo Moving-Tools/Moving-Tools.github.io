@@ -16,19 +16,38 @@
     display: flex;
     margin: 0;
     padding: 2vh 5vw;
-    color: #4B983E;
+    color: #bce4bc;
     justify-content: space-between;
     flex-direction: row;
     font-size: 7vw;
     border-bottom: 0.3vh solid #84d876;
 }
 
-.top-nav a {
-    color: #bce4bc;
+.top-nav #hamburger:hover {
+    color: #84d876;
 }
 
-.menu {
+#menu {
     display: none;
+    z-index: 1;
+    /* display: inline-grid; */
+    position: absolute;
+    justify-self: baseline;
+    width: 16.5vw;
+    margin-top: -0.3vh;
+    background-color: rgba(255, 221, 29, 0.05);
+}
+
+#menu a {
+    display: flex;
+    font-size: 3vw;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #84d876;
+    border: 0.2vh solid #84d876;
+    border-top: none;
+    padding: 0.5vh 0 1vh;
 }
 
 #appName {
@@ -87,4 +106,5 @@ button {
     height: calc(2.5vh + 2.5vw);
     align-self: flex-end;
     font-size: calc(1vw + 1vh);
+    background-color: rgba(252, 216, 17, 0.795);
 }
