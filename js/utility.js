@@ -99,19 +99,17 @@ function nextStep() {
 };
 
 function dropMenu(){
-    if(toggle = false){
-        toggle = true;
+    if(toggle == false){
         menu.style.display = "inline-block";
+        toggle = true;
+        return;
     }
     else {
-        toggle = false;
         menu.style.display = "none";
+        toggle = false;
     }
 };
 
-document.getElementById("page").onclick(function(){
-    if(toggle){
-        toggle = false;
-        menu.style.display = "none";
-    }
-});
+// document.getElementById("page").onclick(function(){
+//     document.getElementById("menu").style.display = "none";
+// });

@@ -12,6 +12,12 @@
     font-size: 4vw;
 }
 
+.page {
+    margin: 0;
+    padding: 0;
+    border: 5px dotted red;
+}
+
 .top-nav {
     display: flex;
     margin: 0;
