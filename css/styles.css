@@ -12,12 +12,6 @@
     font-size: 4vw;
 }
 
-.page {
-    margin: 0;
-    padding: 0;
-    border: 5px dotted red;
-}
-
 .top-nav {
     display: flex;
     margin: 0;
@@ -26,7 +20,7 @@
     justify-content: space-between;
     flex-direction: row;
     font-size: 7vw;
-    border-bottom: 0.3vh solid #84d876;
+    border-bottom: 3px solid #84d876;
 }
 
 .top-nav #hamburger:hover {
@@ -35,18 +29,17 @@
 
 #menu {
     display: none;
-    z-index: 1;
     /* display: inline-grid; */
     position: absolute;
     justify-self: baseline;
     width: 16.5vw;
-    margin-top: -0.3vh;
+    font-size: 3vw;
+    margin-top: -3px;
     background-color: rgba(255, 221, 29, 0.05);
 }
 
 #menu a {
     display: flex;
-    font-size: 3vw;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -105,6 +98,7 @@ input {
     margin: 2% 0 5% 0;
     border: 2px solid yellowgreen;
     border: 2px solid rgba(179, 190, 20, 0.4);
+    border-radius: 2%;
 }
 
 button {
@@ -113,4 +107,39 @@ button {
     align-self: flex-end;
     font-size: calc(1vw + 1vh);
     background-color: rgba(252, 216, 17, 0.795);
+    border-radius: 4%;
+}
+
+
+@media only screen and (min-width: 1081px) {
+    .init {
+        font-size: 44px;
+    }
+    .top-nav {
+        font-size: 77px;
+        padding: 25px 54px;
+    }
+    #step {
+        font-size: 55px;
+    }
+    #circles {
+        font-size: 88px;
+    }
+    form {
+        width: 580px;
+        justify-self: center;
+        margin: auto;
+        padding: 33px;
+    }
+    #menu {
+        width: 178px;
+        font-size: 33px;
+    }
+    button {
+        width: 146px;
+        height: 52px;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+    }
 }

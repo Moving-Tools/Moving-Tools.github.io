@@ -1,6 +1,7 @@
 var button = document.getElementById("next");
 var formText = document.getElementById("formText");
 var menu = document.getElementById("menu");
+var main = document.getElementsByTagName("main");
 var toggle = false;
 
 var circle1 = document.getElementById("circle1");
@@ -47,10 +48,10 @@ var step2 = `<label for="destination_state">Destination State or Zip:</label>
 <br>
 <button onclick="nextStep()" type="button" id="next">Next</button>`;
 
-var origin_state;
-var destination_state;
-var current_bill;
-var estimated_bill;
+var origin_state = 'CA';
+var destination_state = 'NY';
+var current_bill = 123.45;
+var estimated_bill = 0;
 
 var step3 = `<p>Your estimated utility bill in ${destination_state} is ${estimated_bill}<br>
 This may or may not be accurate!</p>
@@ -110,6 +111,10 @@ function dropMenu(){
     }
 };
 
-// document.getElementById("page").onclick(function(){
-//     document.getElementById("menu").style.display = "none";
-// });
+main.onclick = function() {closeMenu()};
+
+function closeMenu(){
+    if(toggle = true){
+        menu.style.display = "none";
+    }
+    };
