@@ -110,10 +110,11 @@ function dropMenu(){
     }
 };
 
-main.onclick = function() {closeMenu()};
+// Close Menu when clicking outside the menu
+// main.onclick = function() {closeMenu()};
 
-function closeMenu(){
-    if(toggle = true){
-        menu.style.display = "none";
-    }
-    };
+// function closeMenu(){
+//     if(toggle = true){
+//         menu.style.display = "none";
+//     }
+// };
