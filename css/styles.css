@@ -4,8 +4,7 @@
 
 .init {
     box-sizing: border-box;
-    background-color: #1B0D26;
-    background-image: url("../img/random-grey-variations.png");
+    background-color: #1a171d;
     background-repeat: repeat;
     padding: 0;
     margin: 0;
@@ -23,7 +22,8 @@
     flex-direction: row;
     font-size: 7vw;
     border-bottom: 3px solid #84d876;
-    background-color: #1B0D26;
+    background-color: #29132b80;
+    background-image: url("../img/random-grey-variations.png");
 }
 
 .top-nav #hamburger:hover {
@@ -90,8 +90,9 @@ form {
     padding: 3%;
     margin: 0 20% 2%;
     border: 2px solid rgba(188, 228, 188, 80%);
-    border-radius: 1vh 1vw;
-    background-color: #1B0D26;
+    border-radius: 1vh;
+    background-color: #29132b80;
+    background-image: url("../img/random-grey-variations.png");
 }
 
 input {
@@ -141,6 +142,7 @@ input {
         justify-self: center;
         margin: auto;
         padding: 33px;
+        border-radius: 11px;
     }
     #menu {
         width: 178px;
