@@ -101,7 +101,7 @@ input {
     border-radius: 2%;
 }
 
-button {
+#next {
     width: calc(7vh + 7vw);
     height: calc(2.5vh + 2.5vw);
     align-self: flex-end;
@@ -135,7 +135,7 @@ button {
         width: 178px;
         font-size: 33px;
     }
-    button {
+    #next {
         width: 146px;
         height: 52px;
         font-size: 24px;

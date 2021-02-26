@@ -37,7 +37,7 @@ var step1 = `<label for="origin_state">Current State or Zip:</label>
 <input type="text" id="origin_bill" name="origin_bill" placeholder="123.45">
 
 <br>
-<button onclick="nextStep()" type="button" id="next">Next</button>`;
+<input type="submit" value="Next" onclick="nextStep()" id="next">`;
 
 var step2 = `<label for="destination_state">Destination State or Zip:</label>
 <input type="text" id="destination_state" name="destination_state" placeholder="NY">
@@ -46,17 +46,13 @@ var step2 = `<label for="destination_state">Destination State or Zip:</label>
 <input type="text" id="square_ft_change" name="square_ft_change" placeholder="(Optional)">
 
 <br>
-<button onclick="nextStep()" type="button" id="next">Next</button>`;
+<input type="submit" value="Next" onclick="nextStep()" id="next">`;
 
-var origin_state = 'CA';
-var destination_state = 'NY';
-var current_bill = 123.45;
-var estimated_bill = 0;
+let origin_state = 'CA';
+let destination_state = 'NY';
+let current_bill = 123.45;
+let estimated_bill = 0;
 
-var step3 = `<p>Your estimated utility bill in ${destination_state} is ${estimated_bill}<br>
-This may or may not be accurate!</p>
-<br>
-<button onclick="nextStep()" type="button" id="next">Restart</button>`;
 
 function nextStep() {
     if(step == 1){
@@ -66,7 +62,7 @@ function nextStep() {
         stepInfo.innerHTML = "Step 2: Destination Info";
         formText.innerHTML = step2;
         formText = document.getElementById("formText");
-        console.log(circle1);
+        console.log(origin_state);
         circle1.classList.remove(uncheckedCircle);
         circle1.classList.add(checkedCircle);
         circle2.classList.remove(incompleteStepCircle);
@@ -78,7 +74,10 @@ function nextStep() {
         destination_state = document.getElementById("destination_state").value;
         estimated_bill = current_bill * 2;
         stepInfo.innerHTML = "Your Estimate";
-        formText.innerHTML = step3;
+        formText.innerHTML = `<p>Your estimated utility bill in ${destination_state} is ${estimated_bill}<br>
+        This may or may not be accurate!</p>
+        <br>
+        <input type="submit" value="Restart" onclick="nextStep()" id="next">`;
         formText = document.getElementById("formText");
         circle2.classList.remove(uncheckedCircle);
         circle2.classList.add(checkedCircle);
