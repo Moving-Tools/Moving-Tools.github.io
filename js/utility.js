@@ -40,7 +40,7 @@ var step1 = `<label for="origin_state">Current State or Zip:</label>
 <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
 
 <br>
-<input type="submit" value="Next" onclick="nextStep()" id="next">`;
+<button type="button" value="Next" onclick="nextStep()" id="next">Next</button>`;
 
 var step2 = `<label for="destination_state">Destination State or Zip:</label>
 <input type="text" id="destination_state" name="destination_state" placeholder="NY" required>
@@ -49,7 +49,7 @@ var step2 = `<label for="destination_state">Destination State or Zip:</label>
 <input type="text" id="square_ft_change" name="square_ft_change" placeholder="(Optional)">
 
 <br>
-<input type="submit" value="Next" onclick="nextStep()" id="next">`;
+<button type="button" value="Next" onclick="nextStep()" id="next">Next</button>`;
 
 // Stored Variables
 
@@ -86,7 +86,7 @@ function nextStep() {
         formText.innerHTML = `<p>Your estimated utility bill in ${destination_state} is ${estimated_bill}<br>
         This may or may not be accurate!</p>
         <br>
-        <input type="submit" value="Restart" onclick="nextStep()" id="next">`;
+        <button type="button" value="Next" onclick="nextStep()" id="next">Restart</button>`;
         circle2.classList.remove(uncheckedCircle);
         circle2.classList.add(checkedCircle);
         circle3.classList.remove(incompleteStepCircle);
@@ -103,6 +103,7 @@ function nextStep() {
 };
 
 function validateForm(){
+
     if(step == 1){
         origin_state = document.getElementById("origin_state").value.toUpperCase();
         origin_bill = document.getElementById("origin_bill").value;
