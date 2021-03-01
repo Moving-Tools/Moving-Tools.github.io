@@ -69,13 +69,16 @@
         <form onsubmit="nextStep()" id="formText">
 
             <label for="origin_state">Current State or Zip:</label>
-            <input type="text" id="origin_state" name="origin_state" placeholder="CA">
+            <input type="text" id="origin_state" name="origin_state" placeholder="CA" required>
 
             <label for="origin_bill">Total Utilities:</label>
-            <input type="text" id="origin_bill" name="origin_bill" placeholder="123.45">
+            <input type="text" id="origin_bill" name="origin_bill" placeholder="123.45" required>
+            
+            <label for="origin_sqft">Square Footage:</label>
+            <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
 
             <br>
-            <input type="submit" value="Next" onclick="nextStep()" id="next">
+            <button type="button" value="Next" onclick="nextStep()" id="next">Next</button>
 
         </form>
 
