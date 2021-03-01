@@ -53,6 +53,10 @@
     padding: 0.5vh 0 1vh;
 }
 
+#menu a:last-child {
+    border-bottom-right-radius: 3px;
+}
+
 #appName {
     color: yellow;
     text-shadow: 3px 1px 4px rgb(187, 190, 20, 0.6);
@@ -95,7 +99,7 @@ form {
     border-radius: 1vh;
     background-color: #1d0e1f80;
     background-image: url("../img/random-grey-variations.png");
-    box-shadow: 1px 1px 8px rgba(220, 226, 129, 0.5);
+    box-shadow: 1px 1px 6px rgba(220, 226, 129, 0.5);
     text-shadow: 1px 1px 3px rgb(187, 190, 20, 0.5);
 }
 
@@ -120,7 +124,7 @@ input:focus {
     align-self: flex-end;
     font-size: calc(1vw + 1vh);
     background-color: rgba(252, 216, 17, 0.795);
-    border-radius: 4%;
+    border-radius: 4%/10%;
     box-shadow: 1px 2px 5px rgba(85, 36, 105, 0.719);
     color:rgba(32, 16, 39, 0.938)
 }
