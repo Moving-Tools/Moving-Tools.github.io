@@ -1,8 +1,6 @@
 var button = document.getElementById("next");
 var formText = document.getElementById("formText");
-var menu = document.getElementById("menu");
 var main = document.getElementsByTagName("main");
-var toggle = false;
 
 var circle1 = document.getElementById("circle1");
 var circle2 = document.getElementById("circle2");
@@ -155,26 +153,3 @@ function validateForm(){
         return true;
     }
 }
-
-function dropMenu(){
-    if(toggle == false){
-        menu.style.display = "inline-block";
-        toggle = true;
-        return;
-    }
-    else {
-        menu.style.display = "none";
-        toggle = false;
-    }
-};
-
-
-
-// Close Menu when clicking outside the menu
-// main.onclick = function() {closeMenu()};
-
-// function closeMenu(){
-//     if(toggle = true){
-//         menu.style.display = "none";
-//     }
-// };
