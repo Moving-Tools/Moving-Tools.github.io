@@ -13,12 +13,14 @@ function dropMenu(){
     }
 };
 
+// Function runs on resize
+function getWindowWidth() {
+    let windowWidth = window.innerWidth;
+    setTimeout(function(){
+        if (windowWidth >= 800 && toggle == true) {
+            menu.style.display = 'none';
+        }
+    }, 100);
+}
 
-// Close Menu when clicking outside the menu
-// main.onclick = function() {closeMenu()};
-
-// function closeMenu(){
-//     if(toggle = true){
-//         menu.style.display = "none";
-//     }
-// };
+window.addEventListener('resize', getWindowWidth);
