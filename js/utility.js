@@ -66,7 +66,6 @@ let sq_ft_text = '';
 // RegEx matching
 
 let state = /[A-Z][A-Z]/;
-// let zip = /\d\d\d\d\d/;
 let dollar = /^\$?\d+([.]\d\d)?$/;
 let dollarFilter = /\d+([.]\d\d)?$/;
 let sqft = /^\d*$/;
@@ -90,7 +89,7 @@ function nextStep() {
     if(step == 2){
         step = 3;
         stepInfo.innerHTML = "Your Estimate";
-        formText.innerHTML = `<p>Your estimated utility bill in ${destination_state} is ${estimated_bill}<br>
+        formText.innerHTML = `<p>Your estimated utility bill in <span id="output">${destination_state}</span> is <span id="output">$${estimated_bill}</span>.<br>
         ${sq_ft_text}</p>
         <br>
         <button type="button" value="Next" onclick="nextStep()" id="next">Restart</button>`;
@@ -139,8 +138,9 @@ function validateForm(){
 
     if(step == 2){
 
-        destination_state = document.getElementById("destination_state").value;
+        destination_state = document.getElementById("destination_state").value.toUpperCase();
         destination_sqft = document.getElementById("destination_sqft").value;
+        console.log(destination_state);
         
         if(destination_state in billData) {
             destination_bill_ref = billData[destination_state];
@@ -148,7 +148,7 @@ function validateForm(){
             estimated_bill = Math.round(origin_bill * destination_bill_ref / origin_bill_ref);
             // If sqft was entered both times, use it as a multiplier
             if(sqft.test(origin_sqft) && sqft.test(destination_sqft)) {
-                estimated_bill = estimated_bill * destination_sqft / origin_sqft;
+                estimated_bill = Math.round(estimated_bill * destination_sqft / origin_sqft);
                 sq_ft_text = 'Your square footage was taken into account!';
             }
             else {
