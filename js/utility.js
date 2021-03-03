@@ -31,7 +31,7 @@ var circlesDefault = `
 var step1 = `<label for="origin_state">Current State:</label>
 <input type="text" id="origin_state" name="origin_state" placeholder="CA" required>
 
-<label for="origin_bill">Total Utilities:</label>
+<label for="origin_bill">Electric + Gas Bills:</label>
 <input type="text" id="origin_bill" name="origin_bill" placeholder="123.45" required>
 
 <label for="origin_sqft">Square Footage:</label>
@@ -147,7 +147,7 @@ function validateForm(){
             // Calculate bill
             estimated_bill = Math.round(origin_bill * destination_bill_ref / origin_bill_ref);
             // If sqft was entered both times, use it as a multiplier
-            if(sqft.test(origin_sqft) && sqft.test(destination_sqft)) {
+            if(origin_sqft.length > 2 && destination_sqft.length > 2 && sqft.test(origin_sqft) && sqft.test(destination_sqft)) {
                 estimated_bill = Math.round(estimated_bill * destination_sqft / origin_sqft);
                 sq_ft_text = 'Your square footage was taken into account!';
             }
