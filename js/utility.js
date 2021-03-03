@@ -29,10 +29,13 @@ var circlesDefault = `
 `;
 
 var step1 = `<label for="origin_state">Current State:</label>
-<input type="text" id="origin_state" name="origin_state" placeholder="CA" required>
+<span id="origin_state_error">Please enter a 2-letter state code.</span>
+<input type="text" id="origin_state" name="origin_state" placeholder="Ex: CA" required>
+
 
 <label for="origin_bill">Electric + Gas Bills:</label>
-<input type="text" id="origin_bill" name="origin_bill" placeholder="123.45" required>
+<span id="origin_bill_error">Please enter a dollar value ($ and . symbols are okay).</span>
+<input type="text" id="origin_bill" name="origin_bill" placeholder="Ex: 321.45" required>
 
 <label for="origin_sqft">Square Footage:</label>
 <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
@@ -41,13 +44,17 @@ var step1 = `<label for="origin_state">Current State:</label>
 <button type="button" value="Next" onclick="nextStep()" id="next">Next</button>`;
 
 var step2 = `<label for="destination_state">Destination State:</label>
-<input type="text" id="destination_state" name="destination_state" placeholder="NY" required>
+<span id="destination_state_error">Please enter a 2-letter state code.</span>
+<input type="text" id="destination_state" name="destination_state" placeholder="Ex: NY" required>
 
 <label for="destination_sqft">New Square Footage:</label>
 <input type="text" id="destination_sqft" name="destination_sqft" placeholder="(Optional)">
 
 <br>
 <button type="button" value="Next" onclick="nextStep()" id="next">Next</button>`;
+
+// Stored styles
+const errorShadow = "inset -1px 2px 5px rgba(235, 11, 11, 0.9)";
 
 // Stored Variables
 
@@ -68,8 +75,10 @@ let sq_ft_text = '';
 let state = /[A-Z][A-Z]/;
 let dollar = /^\$?\d+([.]\d\d)?$/;
 let dollarFilter = /\d+([.]\d\d)?$/;
-let sqft = /^\d*$/;
+let sqft = /\d*/;
 let sqft_show = false;
+
+formText.innerHTML = step1;
 
 function nextStep() {
     var valid = validateForm();
@@ -120,9 +129,11 @@ function validateForm(){
         if(origin_state in billData) {
             origin_bill_ref = billData[origin_state];
             document.getElementById("origin_state").style.boxShadow = "inset -1px 2px 5px rgba(32, 16, 39, 0.7)";
+            document.getElementById("origin_state_error").style.display = "none";
             }
             else {
-                document.getElementById("origin_state").style.boxShadow = "inset -1px 2px 5px rgba(235, 11, 11, 0.9)";
+                document.getElementById("origin_state").style.boxShadow = errorShadow;
+                document.getElementById("origin_state_error").style.display = "block";
                 return false;
             }
         // Test for dollar value
@@ -131,7 +142,8 @@ function validateForm(){
             return true;
         }
         else {
-            document.getElementById("origin_bill").style.boxShadow = "inset -1px 2px 5px rgba(235, 11, 11, 0.9)";
+            document.getElementById("origin_bill").style.boxShadow = errorShadow;
+            document.getElementById("origin_bill_error").style.display = "block";
             return false;
         }
     }
@@ -148,7 +160,7 @@ function validateForm(){
             estimated_bill = Math.round(origin_bill * destination_bill_ref / origin_bill_ref);
             // If sqft was entered both times, use it as a multiplier
             if(origin_sqft.length > 2 && destination_sqft.length > 2 && sqft.test(origin_sqft) && sqft.test(destination_sqft)) {
-                estimated_bill = Math.round(estimated_bill * destination_sqft / origin_sqft);
+                estimated_bill = Math.round(estimated_bill * sqft.exec(destination_sqft)[0] / sqft.exec(origin_sqft)[0]);
                 sq_ft_text = 'Your square footage was taken into account!';
             }
             else {
@@ -157,7 +169,8 @@ function validateForm(){
             return true;
             }
             else {
-                document.getElementById("destination_state").style.boxShadow = "inset -1px 2px 5px rgba(235, 11, 11, 0.9)";
+                document.getElementById("destination_state").style.boxShadow = errorShadow;
+                document.getElementById("destination_state_error").style.display = "block";
                 return false;
             }
         }

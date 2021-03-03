@@ -70,10 +70,13 @@
         <form onsubmit="nextStep()" id="formText">
 
             <label for="origin_state">Current State:</label>
-            <input type="text" id="origin_state" name="origin_state" placeholder="CA" required>
+            <span id="origin_state_error">Please enter a 2-letter state code.</span>
+            <input type="text" id="origin_state" name="origin_state" placeholder="Ex: CA" required>
+            
 
             <label for="origin_bill">Electric + Gas Bills:</label>
-            <input type="text" id="origin_bill" name="origin_bill" placeholder="321.45" required>
+            <span id="origin_bill_error">Please enter a dollar value ($ and . symbols are okay).</span>
+            <input type="text" id="origin_bill" name="origin_bill" placeholder="Ex: 321.45" required>
             
             <label for="origin_sqft">Square Footage:</label>
             <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
