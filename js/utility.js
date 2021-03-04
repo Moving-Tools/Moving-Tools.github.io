@@ -98,8 +98,8 @@ function nextStep() {
     if(step == 2){
         step = 3;
         stepInfo.innerHTML = "Your Estimate";
-        formText.innerHTML = `<p>Your estimated utility bill in <span id="output">${destination_state}</span> is <span id="output">$${estimated_bill}</span>.<br>
-        ${sq_ft_text}</p>
+        formText.innerHTML = `<p>Your estimated utility bill in <span>${destination_state}</span> is <span>$${estimated_bill}</span>.<br>
+        <span>${sq_ft_text}</span></p>
         <br>
         <button type="button" value="Next" onclick="nextStep()" id="next">Restart</button>`;
         circle2.classList.remove(uncheckedCircle);

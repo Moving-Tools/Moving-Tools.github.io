@@ -16,7 +16,7 @@
 .top-nav {
     display: flex;
     margin: 0;
-    padding: 2vh 5vw;
+    padding: 1vh 5vw;
     color: #bce4bc;
     justify-content: space-between;
     align-content: center;
@@ -140,6 +140,11 @@ p > span {
     color:rgb(252, 237, 7);
 }
 
+p > span:last-child {
+    color: #84d876;
+    font-size: calc(5px + 1.5vw);
+}
+
 #next {
     width: calc(7vh + 7vw);
     height: calc(2.5vh + 2.5vw);
@@ -154,7 +159,7 @@ p > span {
 
 #large-menu {
     display: none;
-    font-size: 5vw;
+    font-size: 3vw;
     text-decoration: none;
     color: #84d876;
     text-shadow: 1px 1px 3px rgb(187, 190, 20, 0.5);
@@ -163,7 +168,7 @@ p > span {
 
 #footer {
     text-align: center;
-    margin: calc(20px + 2vw + 2vh);
+    margin-top: calc(20px + 1vw + 1vh);
     font-size: 1vw;
     color:rgba(253, 250, 49, 0.5);
     text-shadow: 0px 0px 1px rgba(255, 224, 45, 0.582);
@@ -195,7 +200,7 @@ p > span {
     }
     .top-nav {
         font-size: 77px;
-        padding: 25px 54px;
+        padding: 12px 54px;
         justify-content: space-around;
     }
     #step {
@@ -223,7 +228,7 @@ p > span {
         margin: 0;
     }
     #large-menu {
-        font-size: 54px;
+        font-size: 33px;
     }
     #footer {
         font-size: 11px;
