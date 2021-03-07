@@ -2,14 +2,24 @@
     border: 1px dotted red;
 } */
 
+:root {
+    --foreground1: #bce4bc;
+    --foreground2: #84d876;
+    --foreground290: #84d87690;
+    --background1: #160c20;
+    --background2: rgb(29, 4, 31);
+    --background290: rgba(29, 4, 31, .9);
+    --shadow1: rgba(220, 226, 129, 0.5);
+}
+
 .init {
     box-sizing: border-box;
-    background-color: #1a171d;
+    background-color: var(--background1);
     background-repeat: repeat;
     padding: 0;
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #84d876;
+    color: var(--foreground1);
     font-size: 4vw;
 }
 
@@ -17,18 +27,18 @@ nav {
     display: flex;
     margin: 0;
     padding: 1vh 5vw;
-    color: #bce4bc;
+    color: var(--foreground1);
     justify-content: space-between;
     align-content: center;
     flex-direction: row;
     font-size: 7vw;
-    border-bottom: 3px solid #84d876;
-    background-color: #1d0e1f80;
+    border-bottom: 3px solid var(--foreground2);
+    background-color: var(--background2);
     background-image: url("../img/random-grey-variations.png");
 }
 
 nav #hamburger:hover {
-    color: #84d876;
+    color: var(--foreground2);
 }
 
 nav #small-menu {
@@ -43,16 +53,15 @@ nav #small-menu {
     width: 16.5vw;
     font-size: 3vw;
     margin-top: -3px;
-    /* background-color: rgba(133, 20, 240, 0.082); */
-    background-color: rgba(29, 14, 31, 0.5);
+    background-color: var(--background2);
     background-image: url("../img/random-grey-variations.png");
 }
 
 #menu a {
     display: flex;
     text-decoration: none;
-    color: #84d876;
-    border: 0.2vh solid #84d876;
+    color: var(--foreground1);
+    border: 0.2vh solid var(--foreground1);
     border-top: none;
     border-left: none;
     padding: 0.5vh 0 1vh;
@@ -72,17 +81,17 @@ nav #small-menu {
 }
 
 #appName {
-    color: rgb(200, 255, 10);
-    text-shadow: 3px 1px 4px rgb(159, 190, 20, 0.6);
-    -webkit-text-stroke: 0.05vw rgb(200, 255, 10);
-    -webkit-text-fill-color: rgba(159, 190, 20, 0.4);
+    color: var(--foreground2);
+    text-shadow: 3px 1px 4px var(--foreground290);
+    -webkit-text-stroke: 0.1vw var(--foreground2);
+    -webkit-text-fill-color: var(--foreground290);
     font-family: 'Oleo Script Swash Caps', cursive;
 }
 
 .step-tracker {
-    color: #bce4bc;
+    color: var(--foreground1);
     text-align: center;
-    text-shadow: 1px 1px 3px rgb(187, 190, 20, 0.6);
+    text-shadow: 1px 1px 3px var(--shadow1);
 }
 
 #step {
@@ -102,14 +111,14 @@ nav #small-menu {
 form {
     display: flex;
     flex-direction: column;
-    padding: 3%;
-    margin: 0 20% 2%;
-    border: 2px solid rgba(188, 228, 188, 80%);
+    padding: 3% 3% 3% 3%;
+    margin: 0 18%;
+    border: 2px solid var(--foreground2);
     border-radius: 1vh;
-    background-color: #1d0e1f80;
+    background-color: var(--background290);
     background-image: url("../img/random-grey-variations.png");
-    box-shadow: 1px 1px 6px rgba(220, 226, 129, 0.5);
-    text-shadow: 1px 1px 3px rgb(187, 190, 20, 0.5);
+    box-shadow: 1px 1px 6px var(--shadow1);
+    text-shadow: 1px 1px 3px var(--shadow1);
 }
 
 input {
@@ -118,13 +127,13 @@ input {
     font-weight: 600;
     font-size: calc(10px + 0.5vh + 0.5vw);
     margin: 2% 0 5% 0;
-    border: 2px rgba(32, 16, 39, 0.7);
+    border: 2px var(--background2);
     border-radius: 8px/6px;
-    box-shadow: inset -1px 2px 5px rgba(32, 16, 39, 0.7);
+    box-shadow: inset -1px 2px 5px var(--background2);
 }
 
 input:focus {
-    box-shadow: inset 0 -2px 4px yellowgreen;
+    box-shadow: inset 0 -2px 4px var(--foreground2);
 }
 
 ::placeholder {
@@ -133,17 +142,17 @@ input:focus {
 
 form > span {
     font-size: calc(10px + 0.5vw);
-    color: rgba(185, 21, 21, 0.8);
+    color: rgba(185, 21, 21, 0.9);
     text-shadow: 1px 1px 3px rgba(125, 21, 21, 0.8);
     display: none;
 }
 
 p > span {
-    color:rgb(252, 237, 7);
+    color: var(--foreground2);
 }
 
 p > span:last-child {
-    color: #84d876;
+    color: var(--foreground1);
     font-size: calc(5px + 1.5vw);
 }
 
@@ -153,29 +162,32 @@ p > span:last-child {
     align-self: flex-end;
     font-size: calc(1vw + 1vh);
     font-weight: bold;
-    background-color: rgb(222, 247, 20);
+    background-color: var(--foreground2);
     border-radius: 4%/10%;
-    box-shadow: 1px 2px 5px rgba(85, 36, 105, 0.719);
-    color:rgba(32, 16, 39, 0.938)
+    box-shadow: 1px 1px 2px var(--foreground1);
+    color: var(--background1);
 }
 
 #large-menu {
     display: none;
     font-size: 3vw;
     text-decoration: none;
-    color: #84d876;
-    text-shadow: 1px 1px 3px rgb(187, 190, 20, 0.5);
+    color: var(--foreground1);
+    text-shadow: 1px 1px 3px var(--shadow1);
     text-align: center;
 }
 
 footer {
     text-align: center;
-    margin-top: calc(20px + 1vw + 1vh);
+    margin-top: calc(10px + 1vw + 1vh);
     font-size: 1vw;
-    color:rgba(213, 250, 49, 0.5);
-    text-shadow: 0px 0px 1px rgba(235, 224, 45, 0.582);
+    color: var(--foreground2)90;
+    text-shadow: 0px 0px 1px var(--shadow1);
 }
 
+#mode:hover {
+    color: var(--foreground2);
+}
 
 
 @media only screen and (min-width: 505px) {
