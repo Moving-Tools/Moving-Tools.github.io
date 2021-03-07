@@ -13,7 +13,7 @@
     font-size: 4vw;
 }
 
-.top-nav {
+nav {
     display: flex;
     margin: 0;
     padding: 1vh 5vw;
@@ -27,11 +27,11 @@
     background-image: url("../img/random-grey-variations.png");
 }
 
-.top-nav #hamburger:hover {
+nav #hamburger:hover {
     color: #84d876;
 }
 
-.top-nav #small-menu {
+nav #small-menu {
     display: none;
 }
 
@@ -168,7 +168,7 @@ p > span:last-child {
     text-align: center;
 }
 
-#footer {
+footer {
     text-align: center;
     margin-top: calc(20px + 1vw + 1vh);
     font-size: 1vw;
@@ -200,7 +200,7 @@ p > span:last-child {
     .init {
         font-size: 44px;
     }
-    .top-nav {
+    nav {
         font-size: 77px;
         padding: 12px 54px;
         justify-content: space-around;
@@ -232,7 +232,7 @@ p > span:last-child {
     #large-menu {
         font-size: 33px;
     }
-    #footer {
+    footer {
         font-size: 11px;
     }
 }
