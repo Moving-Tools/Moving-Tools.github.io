@@ -42,10 +42,6 @@ nav #hamburger:hover {
     color: var(--foreground2);
 }
 
-nav #small-menu {
-    display: none;
-}
-
 #menu {
     display: none;
     /* display: inline-grid; */
@@ -55,7 +51,7 @@ nav #small-menu {
     font-size: 3vw;
     margin-top: -3px;
     background-color: var(--background2);
-    background-image: url("../img/random-grey-variations.png");
+    /* background-image: url("../img/random-grey-variations.png"); */
 }
 
 #menu a {
@@ -63,9 +59,18 @@ nav #small-menu {
     text-decoration: none;
     color: var(--foreground1);
     border: 0.2vh solid var(--foreground1);
-    border-top: none;
     border-left: none;
+    border-bottom: none;
     padding: 0.5vh 0 1vh;
+}
+
+#menu a:first-child {
+    border-top: 3px solid var(--foreground2);
+}
+
+#menu a:last-child {
+    border-bottom-right-radius: 3px;
+    border-bottom: 0.2vh solid var(--foreground1);
 }
 
 #menu a, #circles {
@@ -75,10 +80,6 @@ nav #small-menu {
 
 #circles {
     display: none;
-}
-
-#menu a:last-child {
-    border-bottom-right-radius: 3px;
 }
 
 #appName {
@@ -97,7 +98,6 @@ nav #small-menu {
 
 #step {
     font-size: 4vw;
-    font-weight: 400;
     margin: calc(10px + 1vh) 0 1vh;
 }
 
@@ -162,8 +162,8 @@ p > span:last-child {
     width: calc(10px + 10vw);
     height: calc(10px + 3vh);
     align-self: flex-end;
-    font-size: calc(1vw + 1vh);
-    font-weight: bold;
+    font-size: calc(8px + 0.5vw + 0.5vh);
+    font-weight: 600;
     background-color: var(--foreground2);
     border-radius: 4%/10%;
     box-shadow: 1px 1px 2px var(--foreground1);
@@ -182,9 +182,13 @@ p > span:last-child {
 footer {
     text-align: center;
     margin-top: calc(10px + 1vw + 1vh);
-    font-size: 1vw;
+    font-size: calc(1px + 0.5vw + 0.5vh);
     color: var(--foreground2)90;
     text-shadow: 0px 0px 1px var(--shadow1);
+}
+
+#mode {
+    font-size: calc(3px + 0.5vw + 0.5vh);
 }
 
 #mode:hover {

@@ -1,17 +1,24 @@
 var menu = document.getElementById("menu");
 var menuToggle = false;
 
-function dropMenu(){
-    if(menuToggle == false){
+// Dropdown event
+
+document.querySelector('body').addEventListener('click', clickEvent);
+
+function clickEvent(targ) {
+    // console.log(targ.srcElement.parentElement.id);
+    if(targ.srcElement.parentElement.id != 'hamburger' || menuToggle == true) {
+        menu.style.display = "none";
+        menuToggle = false;
+        return;
+    }
+    else {
         menu.style.display = "inline-block";
         menuToggle = true;
         return;
     }
-    else {
-        menu.style.display = "none";
-        menuToggle = false;
-    }
-};
+}
+
 
 // Function runs on resize
 function getWindowWidth() {
