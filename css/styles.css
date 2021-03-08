@@ -10,6 +10,7 @@
     --background2: rgb(29, 4, 31);
     --background290: rgba(29, 4, 31, .9);
     --shadow1: rgba(220, 226, 129, 0.5);
+    --bgTexture: 'url("../img/random-grey-variations.png")';
 }
 
 .init {
@@ -34,7 +35,7 @@ nav {
     font-size: 7vw;
     border-bottom: 3px solid var(--foreground2);
     background-color: var(--background2);
-    background-image: url("../img/random-grey-variations.png");
+    /* background-image: var(--bgTexture); */
 }
 
 nav #hamburger:hover {
@@ -95,13 +96,14 @@ nav #small-menu {
 }
 
 #step {
-    font-size: 5vw;
-    margin: 3vh 0 1vh;
+    font-size: 4vw;
+    font-weight: 400;
+    margin: calc(10px + 1vh) 0 1vh;
 }
 
 #circles {
-    font-size: 8vw;
-    margin: 1vh 0 3vh;
+    font-size: 5vw;
+    margin: 1vh 0 2vh;
 }
 
 #dash {
@@ -116,20 +118,20 @@ form {
     border: 2px solid var(--foreground2);
     border-radius: 1vh;
     background-color: var(--background290);
-    background-image: url("../img/random-grey-variations.png");
+    /* background-image: url("../img/random-grey-variations.png"); */
     box-shadow: 1px 1px 6px var(--shadow1);
     text-shadow: 1px 1px 3px var(--shadow1);
 }
 
 input {
-    width: 40%;
+    width: 50%;
     height: 10%;
     font-weight: 600;
     font-size: calc(10px + 0.5vh + 0.5vw);
     margin: 2% 0 5% 0;
-    border: 2px var(--background2);
+    border: 2px var(--foreground2);
     border-radius: 8px/6px;
-    box-shadow: inset -1px 2px 5px var(--background2);
+    box-shadow: inset -1px 1px 4px var(--foreground2);
 }
 
 input:focus {
@@ -157,8 +159,8 @@ p > span:last-child {
 }
 
 #next {
-    width: calc(7vh + 7vw);
-    height: calc(2.5vh + 2.5vw);
+    width: calc(10px + 10vw);
+    height: calc(10px + 3vh);
     align-self: flex-end;
     font-size: calc(1vw + 1vh);
     font-weight: bold;
@@ -218,10 +220,10 @@ footer {
         justify-content: space-around;
     }
     #step {
-        font-size: 55px;
+        font-size: 43px;
     }
     #circles {
-        font-size: 88px;
+        font-size: 54px;
     }
     form {
         width: 580px;
@@ -235,8 +237,7 @@ footer {
         font-size: 33px;
     }
     #next {
-        width: 146px;
-        height: 52px;
+        width: 119px;
         font-size: 24px;
         padding: 0;
         margin: 0;
