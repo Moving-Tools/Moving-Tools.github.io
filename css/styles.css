@@ -42,6 +42,11 @@ nav #hamburger:hover {
     color: var(--foreground2);
 }
 
+.fa-bars::before,.fa-bolt::before {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 #menu {
     display: none;
     /* display: inline-grid; */
@@ -230,7 +235,7 @@ footer {
         font-size: 54px;
     }
     form {
-        width: 580px;
+        width: 620px;
         justify-self: center;
         margin: auto;
         padding: 33px;
