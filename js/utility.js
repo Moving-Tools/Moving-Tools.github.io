@@ -89,6 +89,7 @@ function nextStep() {
         step = 2;
         stepInfo.innerHTML = "Step 2: Destination Info";
         formText.innerHTML = step2;
+        formText = document.getElementById("formText");
         circle1.classList.remove(uncheckedCircle);
         circle1.classList.add(checkedCircle);
         circle2.classList.remove(incompleteStepCircle);
@@ -102,6 +103,7 @@ function nextStep() {
         <span>${sq_ft_text}</span></p>
         <br>
         <button type="button" value="Next" onclick="nextStep()" id="next">Restart</button>`;
+        formText = document.getElementById("formText")
         circle2.classList.remove(uncheckedCircle);
         circle2.classList.add(checkedCircle);
         circle3.classList.remove(incompleteStepCircle);
@@ -111,6 +113,7 @@ function nextStep() {
     if(step == 3) {
         step = 1;
         formText.innerHTML = step1;
+        formText = document.getElementById("formText")
         stepInfo.innerHTML = "Step 1: Origin Details";
         circleHTML.innerHTML = circlesDefault;
         return;
@@ -152,7 +155,7 @@ function validateForm(){
 
         destination_state = document.getElementById("destination_state").value.toUpperCase();
         destination_sqft = document.getElementById("destination_sqft").value;
-        console.log(destination_state);
+        console.log("You found an easter egg!");
         
         if(destination_state in billData) {
             destination_bill_ref = billData[destination_state];
