@@ -5,9 +5,9 @@ This site was created to estimate your new utility bill after a move.
 
 An iconized hamburger menu is the default and is replaced by a large text menu. Much of the page scales with viewport size.
 
-Flexbox is used to organize the menu, form, and step tracker visualization. Step tracker is hidden by default for very small screens.
+Flexbox is used to organize the menu, form, and step tracker visualization. Step tracker is hidden by default for very small screens and enabled my media queries.
 
-Nth-child is used for the menu so overlapping lines aren't drawn, the last menu item has a rounded corner, and the menu is scalable for more menu items.
+First and last child selectors are used for the menu so overlapping lines aren't drawn, the last menu item has a rounded corner, and the menu is scalable for more menu items.
 
 
 *Interactivity*

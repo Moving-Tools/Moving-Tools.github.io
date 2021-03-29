@@ -200,7 +200,7 @@ footer {
     color: var(--foreground2);
 }
 
-
+/* Display tracker if screen is >505px */
 @media only screen and (min-width: 505px) {
     #circles {
         display: flex;
