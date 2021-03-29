@@ -121,6 +121,8 @@ function nextStep() {
 };
 
 function validateForm(){
+    // Valid by default to simplify return statement and allow for multiple errors to show
+    var valid = true;
 
     if(step == 1){
 
@@ -134,20 +136,20 @@ function validateForm(){
             document.getElementById("origin_state").style.boxShadow = "inset -1px 2px 5px rgba(32, 16, 39, 0.7)";
             document.getElementById("origin_state_error").style.display = "none";
             }
+            // If the state code isn't valid
             else {
                 document.getElementById("origin_state").style.boxShadow = errorShadow;
                 document.getElementById("origin_state_error").style.display = "block";
-                return false;
+                valid = false;
             }
         // Test for dollar value
         if(dollar.test(origin_bill)) {
             origin_bill = dollarFilter.exec(origin_bill)[0];
-            return true;
         }
         else {
             document.getElementById("origin_bill").style.boxShadow = errorShadow;
             document.getElementById("origin_bill_error").style.display = "block";
-            return false;
+            valid = false;
         }
     }
 
@@ -169,17 +171,13 @@ function validateForm(){
             else {
                 sq_ft_text = 'Square footage was entered incorrectly or left blank!';
             }
-            return true;
-            }
-            else {
+        }
+        else {
                 document.getElementById("destination_state").style.boxShadow = errorShadow;
                 document.getElementById("destination_state_error").style.display = "block";
-                return false;
+                valid = false;
             }
         }
 
-    if(step == 3) {
-        return true;
-    }
-
+    return valid;
 }
