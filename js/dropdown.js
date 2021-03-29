@@ -3,21 +3,45 @@ var menuToggle = false;
 
 // Dropdown event
 
-document.querySelector('body').addEventListener('click', clickEvent);
+document.getElementById('hamburger').addEventListener('click', openMenu);
 
-function clickEvent(targ) {
-    // console.log(targ.srcElement.parentElement.id);
-    if(targ.srcElement.parentElement == null || targ.srcElement.parentElement.id != 'hamburger' || menuToggle == true) {
-        menu.style.display = "none";
-        menuToggle = false;
-        return;
-    }
-    else {
+function openMenu(){
+    if(menuToggle == false){
         menu.style.display = "inline-block";
         menuToggle = true;
-        return;
+        // Timeout required so menu doesn't immediately close from the same click
+        setTimeout(function(){
+            document.querySelector('body').addEventListener('click', closeMenu);
+            document.getElementById('hamburger').removeEventListener('click', openMenu);
+        },200);
     }
 }
+
+function closeMenu(){
+    if(menuToggle == true){
+        menu.style.display = "none";
+        menuToggle = false;
+        document.querySelector('body').removeEventListener('click', closeMenu);
+        document.getElementById('hamburger').addEventListener('click', openMenu);
+    }
+}
+
+// Old dropwdown event
+// document.querySelector('body').addEventListener('click', clickEvent);
+
+// function clickEvent(targ) {
+//     // console.log(targ.srcElement.parentElement.id);
+//     if(targ.srcElement.parentElement == null || targ.srcElement.parentElement.id != 'hamburger' || menuToggle == true) {
+//         menu.style.display = "none";
+//         menuToggle = false;
+//         return;
+//     }
+//     else {
+//         menu.style.display = "inline-block";
+//         menuToggle = true;
+//         return;
+//     }
+// }
 
 
 // Function runs on resize
@@ -26,6 +50,7 @@ function getWindowWidth() {
     setTimeout(function(){
         if (windowWidth >= 800 && menuToggle == true) {
             menu.style.display = 'none';
+            menuToggle == false;
         }
     }, 100);
 }
