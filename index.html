@@ -19,13 +19,8 @@
         <nav>
 
             <div class="dropdown">
-                
-                <div>
-                    <a href="https://github.com/Moving-Tools/Moving-Tools.github.io" id="large-menu" target="_blank" rel="noopener noreferrer">Repo</a>
-                    <span id="hamburger">
-                    <i class="fas fa-bars"></i></span>
-                </div>               
-            
+                    <a href="https://github.com/Moving-Tools/Moving-Tools.github.io" id="large-menu" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <span id="hamburger"><i class="fas fa-bars"></i></span>
             </div>
             
             <div>
@@ -35,15 +30,15 @@
             </div>
 
             <div>
-                <span id="logo"><i class="fas fa-bolt"></i></span>
-                <a href="https://github.com/sourcenrao" id="large-menu" target="_blank" rel="noopener noreferrer">About</a>
+                <a id="logo" class="about"><i class="fas fa-bolt"></i></a>
+                <a id="large-menu" class="about">About</a>
             </div>
             
         </nav>
         <!-- Dropdown Menu (hidden by default) -->
         <div id="menu">
             <a href="https://github.com/Moving-Tools/Moving-Tools.github.io" target="_blank" rel="noopener noreferrer">Repo</a>
-            <a href="https://github.com/sourcenrao" target="_blank" rel="noopener noreferrer">About</a>
+            <a class="about">About</a>
         </div>
 
     <div class="step-tracker">
@@ -67,25 +62,36 @@
         <!-- Completed step: <i class="fas fa-check-circle"></i> -->
 
     </div>
+        <div id="center">
+            <form id="formText">
 
-        <form id="formText">
+                <label for="origin_state">Current State:</label>
+                <span id="origin_state_error">Please enter a 2-letter state code.</span>
+                <input type="text" id="origin_state" name="origin_state" placeholder="Ex: CA" required>
+                
 
-            <label for="origin_state">Current State:</label>
-            <span id="origin_state_error">Please enter a 2-letter state code.</span>
-            <input type="text" id="origin_state" name="origin_state" placeholder="Ex: CA" required>
-            
+                <label for="origin_bill">Electric + Gas Bills:</label>
+                <span id="origin_bill_error">Please enter a dollar value ($ and . symbols are okay).</span>
+                <input type="text" id="origin_bill" name="origin_bill" placeholder="Ex: 321.45" required>
+                
+                <label for="origin_sqft">Square Footage:</label>
+                <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
 
-            <label for="origin_bill">Electric + Gas Bills:</label>
-            <span id="origin_bill_error">Please enter a dollar value ($ and . symbols are okay).</span>
-            <input type="text" id="origin_bill" name="origin_bill" placeholder="Ex: 321.45" required>
-            
-            <label for="origin_sqft">Square Footage:</label>
-            <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
+                <br>
+                <button type="button" value="Next" onclick="nextStep()" id="next">Next</button>
 
-            <br>
-            <button type="button" value="Next" onclick="nextStep()" id="next">Next</button>
-
-        </form>
+            </form>
+            <info id="info">
+                <h3>About</h3>
+                <span>
+                <p>With just your current bill data and the states you're moving from/to, this tool will estimate
+                    your new combined gas and electric bills. If square footage is entered, it will be applied as
+                    a simple multiplier. More accurate values would depend on many other factors.
+                </p>
+                <p>This app doesn't store your data, all calculations are done by your browser!</p>
+                </span>
+            </info>
+        </div>
 
         <footer>
             <span id="mode" onclick="darkMode()">Toggle Dark Mode</span>

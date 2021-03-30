@@ -35,7 +35,11 @@ nav {
     font-size: 7vw;
     border-bottom: 3px solid var(--foreground2);
     background-color: var(--background2);
-    /* background-image: var(--bgTexture); */
+}
+
+/* For about links with no href */
+a {
+    cursor: pointer;
 }
 
 nav #hamburger:hover {
@@ -49,7 +53,6 @@ nav #hamburger:hover {
 
 #menu {
     display: none;
-    /* display: inline-grid; */
     position: absolute;
     justify-self: baseline;
     width: 16.5vw;
@@ -115,17 +118,29 @@ nav #hamburger:hover {
     transform: translateY(calc(-0.2vh + -0.2vw));
 }
 
+#center {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 3% 3% 3%;
+    margin: 0 10%;
+}
+
 form {
     display: flex;
     flex-direction: column;
     padding: 3% 3% 3% 3%;
-    margin: 0 12%;
+    margin: 0;
     border: 2px solid var(--foreground2);
     border-radius: 1vh;
     background-color: var(--background290);
     /* background-image: url("../img/random-grey-variations.png"); */
     box-shadow: 1px 1px 6px var(--shadow1);
     text-shadow: 1px 1px 3px var(--shadow1);
+}
+
+.info {
+    margin: 0 10%;
+    padding: 3%;
 }
 
 input {
@@ -217,6 +232,9 @@ footer {
     #large-menu {
         display: inline-block;
     }
+    #large-menu:hover {
+        color: var(--foreground2);
+    }
     menu {
         display: none;
     }
@@ -241,7 +259,7 @@ footer {
         font-size: 54px;
     }
     form {
-        width: 620px;
+        width: 794px;
         justify-self: center;
         margin: auto;
         padding: 33px;

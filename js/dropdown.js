@@ -57,6 +57,20 @@ function getWindowWidth() {
 
 window.addEventListener('resize', getWindowWidth);
 
+// About link
+
+var aboutArr = document.getElementsByClassName("about");
+[...aboutArr].forEach(element => {
+element.addEventListener('click',showAbout);
+});
+
+function showAbout() {
+    window.scroll({
+        top: document.getElementById('info').getBoundingClientRect().top,
+        behavior: 'smooth'
+    });
+}
+
 // Dark Mode vars
 
 var root = document.querySelector(':root');

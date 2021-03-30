@@ -1,6 +1,5 @@
 var button = document.getElementById("next");
 var formText = document.getElementById("formText");
-var main = document.getElementsByTagName("main");
 
 var circle1 = document.getElementById("circle1");
 var circle2 = document.getElementById("circle2");
