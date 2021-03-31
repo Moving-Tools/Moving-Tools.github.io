@@ -69,7 +69,6 @@
                 <span id="origin_state_error">Please enter a 2-letter state code.</span>
                 <input type="text" id="origin_state" name="origin_state" placeholder="Ex: CA" required>
                 
-
                 <label for="origin_bill">Electric + Gas Bills:</label>
                 <span id="origin_bill_error">Please enter a dollar value ($ and . symbols are okay).</span>
                 <input type="text" id="origin_bill" name="origin_bill" placeholder="Ex: 321.45" required>
@@ -77,20 +76,19 @@
                 <label for="origin_sqft">Square Footage:</label>
                 <input type="text" id="origin_sqft" name="origin_sqft" placeholder="(Optional)">
 
-                <br>
                 <button type="button" value="Next" onclick="nextStep()" id="next">Next</button>
 
             </form>
-            <info id="info">
+            <div id="info">
                 <h3>About</h3>
                 <span>
                 <p>With just your current bill data and the states you're moving from/to, this tool will estimate
                     your new combined gas and electric bills. If square footage is entered, it will be applied as
-                    a simple multiplier. More accurate values would depend on many other factors.
+                    a simple multiplier.
                 </p>
                 <p>This app doesn't store your data, all calculations are done by your browser!</p>
                 </span>
-            </info>
+            </div>
         </div>
 
         <footer>
