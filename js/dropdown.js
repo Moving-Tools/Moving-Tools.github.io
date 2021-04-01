@@ -68,11 +68,12 @@ let aboutToggle = false;
 
 function showAbout() {
     if(aboutToggle == false) {
+        // Scroll to about panel
         window.scroll({
             top: document.getElementById('info').getBoundingClientRect().top,
             behavior: 'smooth'
         });
-        document.getElementById('info').innerHTML = `<h3>About</h3>
+        document.getElementById('info').innerHTML = `<h3 id="newAbout">About</h3>
         <span>
         <p>With just your current bill data and the states you're moving from/to, this tool will estimate
             your new combined gas and electric bills. If square footage is entered, it will be applied as
@@ -84,11 +85,12 @@ function showAbout() {
         aboutToggle = true;
     }
     else {
-        document.getElementById('info').innerHTML = `<p><a id="mode" onclick="darkMode()">Toggle Dark Mode</a></p>
-        <img src="img/pexels-sanaan-mazhar-3052361.jpg">`
+        document.getElementById('info').innerHTML = `<img src="img/pexels-sanaan-mazhar-3052361.jpg" id="newAbout" class="about">
+        <a id="mode" onclick="darkMode()">Toggle Dark Mode</a>`
         aboutToggle = false;
-
     }
+    // After toggle, re-add event listener to the clickable element
+    document.getElementById('newAbout').addEventListener('click',showAbout);
 }
 
 // Dark Mode vars
