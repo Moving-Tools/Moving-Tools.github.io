@@ -59,25 +59,36 @@ window.addEventListener('resize', getWindowWidth);
 
 // About link
 
-var aboutArr = document.getElementsByClassName("about");
+let aboutArr = document.getElementsByClassName("about");
 [...aboutArr].forEach(element => {
 element.addEventListener('click',showAbout);
 });
 
+let aboutToggle = false;
+
 function showAbout() {
-    window.scroll({
-        top: document.getElementById('info').getBoundingClientRect().top,
-        behavior: 'smooth'
-    });
-    document.getElementById('info').innerHTML = `<h3>About</h3>
-                <span>
-                <p>With just your current bill data and the states you're moving from/to, this tool will estimate
-                    your new combined gas and electric bills. If square footage is entered, it will be applied as
-                    a simple multiplier.
-                </p>
-                <p>This app doesn't store your data, all calculations are done by your browser!</p>
-                </span>`
-    
+    if(aboutToggle == false) {
+        window.scroll({
+            top: document.getElementById('info').getBoundingClientRect().top,
+            behavior: 'smooth'
+        });
+        document.getElementById('info').innerHTML = `<h3>About</h3>
+        <span>
+        <p>With just your current bill data and the states you're moving from/to, this tool will estimate
+            your new combined gas and electric bills. If square footage is entered, it will be applied as
+            a simple multiplier.
+        </p>
+        <p>This app doesn't store your data, all calculations are done by your browser!</p>
+        </span>
+        <a id="mode" onclick="darkMode()">Toggle Dark Mode</a>`
+        aboutToggle = true;
+    }
+    else {
+        document.getElementById('info').innerHTML = `<p><a id="mode" onclick="darkMode()">Toggle Dark Mode</a></p>
+        <img src="img/pexels-sanaan-mazhar-3052361.jpg">`
+        aboutToggle = false;
+
+    }
 }
 
 // Dark Mode vars
