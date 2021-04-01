@@ -316,6 +316,7 @@ footer {
         border-left: none;
         border-top: 2px solid var(--foreground2);
         border-radius: 0 1vh 1vh 0;
+        flex-direction: column-reverse;
     }
     #center {
         flex-direction: row;
